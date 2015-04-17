@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOPversion1.Models;
 
 namespace OOPversion1
 {
@@ -48,6 +49,32 @@ namespace OOPversion1
             Console.WriteLine("Initialize Partial Class");
             var partialClass = new SampleClassA();
             Console.WriteLine(partialClass.publicPartialInt); //You will notice that I can access both member in one instance
+
+            #endregion
+
+
+            // *** Inheritance *** //
+            #region Demonstrate Inhiritance
+            // Using Person class with the same fields as a Base Class of Student and Teacher
+            var student = new Student()
+            {
+                FirstName = "Jez Reel",
+                LastName = "Maghuyop",
+                CompletedCourse = "B.S I.T"
+            };
+
+            student.Display();
+
+            var teacher = new Teacher()
+            {
+                FirstName = "Anna Liza",
+                LastName = "Ogayon",
+                Department = "Information Technology",
+                Subject = "Oracle 4",
+                OfficeHourse = "4pm - 5pm"
+            };
+
+            teacher.Display();
 
             #endregion
 
