@@ -38,7 +38,19 @@ namespace OOPversion1
 
             #endregion
 
-       
+            // *** Call SampleClassA Class *** //
+            #region Partial Access Modifier
+            // *** Partial Access Modifier *** //
+            // Partial access modifier merges class in compile time if they have the same Namespace
+            // For this example we have
+            // SampleClassA.cs and AccessModifier > PartialModifier > SampleClassA.cs with same Namespace OOPversion1
+
+            Console.WriteLine("Initialize Partial Class");
+            var partialClass = new SampleClassA();
+            Console.WriteLine(partialClass.publicPartialInt); //You will notice that I can access both member in one instance
+
+            #endregion
+
         }
 
     }
