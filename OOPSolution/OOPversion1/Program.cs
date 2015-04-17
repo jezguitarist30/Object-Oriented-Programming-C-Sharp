@@ -39,22 +39,30 @@ namespace OOPversion1
 
             #endregion
 
+            Console.WriteLine("\n\n");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("\n\n");
+
             // *** Call SampleClassA Class *** //
             #region Partial Access Modifier
             // *** Partial Access Modifier *** //
             // Partial access modifier merges class in compile time if they have the same Namespace
             // For this example we have
             // SampleClassA.cs and AccessModifier > PartialModifier > SampleClassA.cs with same Namespace OOPversion1
-
             Console.WriteLine("Initialize Partial Class");
             var partialClass = new SampleClassA();
             Console.WriteLine(partialClass.publicPartialInt); //You will notice that I can access both member in one instance
 
             #endregion
 
+            Console.WriteLine("\n\n");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("\n\n");
+
 
             // *** Inheritance *** //
             #region Demonstrate Inhiritance
+
             // Using Person class with the same fields as a Base Class of Student and Teacher
             var student = new Student()
             {
@@ -76,7 +84,24 @@ namespace OOPversion1
 
             teacher.Display();
 
+
+            //You can create your Base class from your Sub class
+            Person person1 = new Student();
+            Person person2 = new Teacher();
+
+            //But you can't create a Sub class from the Base Class
+            //Student newStudent = new Person(); //You'll get an error
+
+
             #endregion
+
+
+            Console.WriteLine("\n\n");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("\n\n");
+
+
+
 
         }
 
