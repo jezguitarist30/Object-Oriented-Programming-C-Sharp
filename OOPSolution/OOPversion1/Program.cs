@@ -10,6 +10,7 @@ namespace OOPversion1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Initialize Program");            
         }
     }
 }
