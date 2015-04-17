@@ -54,4 +54,45 @@ namespace OOPversion1
 
 
     }
+
+
+    class PublicStaticClassA
+    {
+        //Public Static Method
+        public static void PrintName(string name)
+        {
+            Console.WriteLine("My Name is: " + name);
+        }
+
+        //Private non-static method
+        void Walk()
+        {
+            Console.WriteLine("Call Public Walk.");
+
+            //*** This will be Successfull ***//
+            //You can call Public Static Member by it's class name without instantiating
+            PublicStaticClassA.PrintName("Jez Reel");
+            
+        }
+    }
+
+
+    class PublicStaticClassB
+    {
+        public PublicStaticClassB()
+        {
+            PublicStaticClassA.PrintName("John"); //Call public static members by it's class name without instantiating
+        }
+
+        void SampleMethod()
+        {
+            PublicStaticClassA.PrintName("Michael"); //Call public static members by it's class name without instantiating
+        }
+
+        static void SampleMethod2()
+        {
+            PublicStaticClassA.PrintName("Ariel"); //Call public static members by it's class name without instantiating
+        }
+    }
+
 }
